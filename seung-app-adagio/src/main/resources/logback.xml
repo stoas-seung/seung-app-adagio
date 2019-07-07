@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+	<property resource="application.properties"/>
+	
+	<if condition='property("os.name").contains("Linux")'>
+		<then>
+			<property name="_LOG_LEVEL" value="INFO"/>
+			<property name="_LOG_REF"	value="_LOG_FILE"/>
+			<property name="_LOG_PATH"  value="/logs/"/>
+		</then>
+	</if>
+	<if condition='property("os.name").contains("Windows")'>
+		<then>
+			<property name="_LOG_LEVEL" value="INFO"/>
+			<property name="_LOG_REF"	value="_LOG_CONSOLE"/>
+		</then>
+	</if>
+	<property name="_LOG_LEVEL" value="INFO"/>
+	<property name="_LOG_REF"	value="_LOG_CONSOLE"/>
+	
+	<!-- keep 30 days' worth of history capped at 3GB total size -->
+	<appender name="_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${_LOG_PATH}/logs/${info.app.name}.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${_LOG_PATH}/logs/${info.app.name}.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+			<totalSizeCap>3GB</totalSizeCap>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="_LOG_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<!--
+	-->
+	
+	<logger level="WARN" name="org.springframework" additivity="false">
+		<appender-ref ref="${_LOG_REF}"/>
+	</logger>
+	<logger level="${_LOG_LEVEL}" name="seung.app" additivity="false">
+		<appender-ref ref="${_LOG_REF}"/>
+	</logger>
+	
+	<root level="${_LOG_LEVEL}">
+		<appender-ref ref="${_LOG_REF}"/>
+	</root>
+	
+</configuration>

@@ -1,0 +1,6 @@
+E:\dev\sts4\wrk_github\seung-app-adagio>npm init
+E:\dev\sts4\wrk_github\seung-app-adagio>npm install --save-dev webpack webpack-cli webpack-dev-server uglifyjs-webpack-plugin optimize-css-assets-webpack-plugin webpack-bundle-analyzer
+E:\dev\sts4\wrk_github\seung-app-adagio>npm install --save-dev @babel/core @babel/preset-env
+E:\dev\sts4\wrk_github\seung-app-adagio>npm install --save-dev babel-loader css-loader style-loader url-loader file-loader mini-css-extract-plugin
+E:\dev\sts4\wrk_github\seung-app-adagio>npm install --save-dev exports-loader lodash jquery moment numeral w2ui
+E:\dev\sts4\wrk_github\seung-app-adagio>

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/*#FFFFFF*/.s-ft-white { color           : rgba(255,255,255,1); }
+/*#FFFFFF*/.s-bd-white { border-color    : rgba(255,255,255,1); }
+/*#FFFFFF*/.s-bg-white { background-color: rgba(255,255,255,1); }
+
+/*#FFA500*/.s-ft-orange { color           : rgba(255,165,0,1); }
+/*#FFA500*/.s-bd-orange { border-color    : rgba(255,165,0,1); }
+/*#FFA500*/.s-bg-orange { background-color: rgba(255,165,0,1); }
+
+/*#303641*/.s-ft-tuna { color           : rgba(48,54,65,1); }
+/*#303641*/.s-bd-tuna { border-color    : rgba(48,54,65,1); }
+/*#303641*/.s-bg-tuna { background-color: rgba(48,54,65,1); }
+
+/*#373E4A*/.s-ft-brightgray { color           : rgba(55,62,74,1); }
+/*#373E4A*/.s-bd-brightgray { border-color    : rgba(55,62,74,1); }
+/*#373E4A*/.s-bg-brightgray { background-color: rgba(55,62,74,1); }
+
+/*#02A4D3*/.s-ft-cerulean { color           : rgba(0,191,255,1); }
+/*#02A4D3*/.s-bd-cerulean { border-color    : rgba(0,191,255,1); }
+/*#02A4D3*/.s-bg-cerulean { background-color: rgba(0,191,255,1); }
+
+/*#DC143C*/.s-ft-crimson { color           : rgba(220,20,60,1); }
+/*#DC143C*/.s-bd-crimson { border-color    : rgba(220,20,60,1); }
+/*#DC143C*/.s-bg-crimson { background-color: rgba(220,20,60,1); }
+
+/*#1034A6*/.s-ft-toreabay { color           : rgba(16,52,166,1); }
+/*#1034A6*/.s-bd-toreabay { border-color    : rgba(16,52,166,1); }
+/*#1034A6*/.s-bg-toreabay { background-color: rgba(16,52,166,1); }
+
